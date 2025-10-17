@@ -5,6 +5,7 @@ This is a real-time 3D wormhole simulation built with Python, Pygame, and Modern
 This project does not render a 3D model. Instead, it operates by **reverse ray-tracing** the path of light (the geodesic) through curved spacetime for every pixel on the screen.
 
 ![Wormhole Simulation Placeholder](gif_wh.gif)
+![Wormhole Simulation Placeholder](gif_wh2.gif)
 ![Wormhole Simulation Placeholder](image/Cover1.png)
 *Figure 1: Viewing the wormhole head-on from a distance. The gravitational lensing (Einstein ring) is clearly visible, showing the distorted "other universe" in the center.*
 
@@ -188,6 +189,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
