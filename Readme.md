@@ -5,11 +5,15 @@ This is a real-time 3D wormhole simulation built with Python, Pygame, and Modern
 This project does not render a 3D model. Instead, it operates by **reverse ray-tracing** the path of light (the geodesic) through curved spacetime for every pixel on the screen.
 
 ![Wormhole Simulation Placeholder](gif_wh.gif)
-![Wormhole Simulation Placeholder](image/Cover1)
-![Wormhole Simulation Placeholder](image/Cover2)
-![Wormhole Simulation Placeholder](image/Cover3)
-![Wormhole Simulation Placeholder](image/Cover4)
-
+![Wormhole Simulation Placeholder](image/Cover1.png)
+*Figure 1: Viewing the wormhole head-on from a distance. The gravitational lensing (Einstein ring) is clearly visible, showing the distorted "other universe" in the center.*
+![Wormhole Simulation Placeholder](image/Cover2.png)
+*Figure 2: Viewing the wormhole from an off-axis angle. It acts as a "lens bubble" in spacetime, distorting the background nebula.*
+![Wormhole Simulation Placeholder](image/Cover3.png)
+*Figure 3: Entering the wormhole's "throat." The lensing is so intense that multiple images of the planet Saturn (from the other side) become visible, wrapped around the central opening.*
+*See (https://arxiv.org/abs/1502.03809) FIG. 9 and FIG. 13.*
+![Wormhole Simulation Placeholder](image/Cover4.png)
+*Figure 4: A side-view while traversing the wormhole's throat ($l \approx 0$). Light from both universes is extremely stretched and distorted, meeting at the "equator" and creating multiple, repeating ghost images.*
 ## Features
 
 * **Real-time GPU Ray-Tracing:** Utilizes ModernGL to perform parallel ray-tracing on the GPU, enabling a high-framerate, interactive experience.
@@ -177,6 +181,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
