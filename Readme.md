@@ -21,7 +21,7 @@ This project does not render a 3D model. Instead, it operates by **reverse ray-t
 *Figure 4: A side-view while traversing the wormhole's throat. Light from both universes is extremely stretched and distorted, meeting at the "equator" and creating multiple, repeating ghost images.*
 
 ![Wormhole Simulation Placeholder](image/universe.png)
-*The original figure of  the world in front of wormhole, the skybox is treated in [Panorama to Cubemap](https://jaxry.github.io/panorama-to-cubemap/) *
+*The original figure of the world in front of wormhole.*
 ## Features
 
 * **Real-time GPU Ray-Tracing:** Utilizes ModernGL to perform parallel ray-tracing on the GPU, enabling a high-framerate, interactive experience.
@@ -70,6 +70,7 @@ This project does not render a 3D model. Instead, it operates by **reverse ray-t
     (Note: The two skyboxes use different naming conventions. The `load_cubemap` function in the code is already set up to handle this.)
 
     You can find usable skybox resources (like the format for `skybox2`) here: [Keijiro's Cubemap Repository](https://github.com/keijiro/CubeMap-Unity/tree/master/Assets/CubeMap)
+    Or you can treat your own backgrounds in [Panorama to Cubemap](https://jaxry.github.io/panorama-to-cubemap/).
 
 ## Usage
 
@@ -189,6 +190,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
