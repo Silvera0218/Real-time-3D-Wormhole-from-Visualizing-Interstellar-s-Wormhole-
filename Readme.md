@@ -13,7 +13,7 @@ This project does not render a 3D model. Instead, it operates by **reverse ray-t
 *Figure 3: Entering the wormhole's "throat." The lensing is so intense that multiple images of the planet Saturn (from the other side) become visible, wrapped around the central opening.*
 *See (https://arxiv.org/abs/1502.03809) FIG. 9 and FIG. 13.*
 ![Wormhole Simulation Placeholder](image/Cover4.png)
-*Figure 4: A side-view while traversing the wormhole's throat ($l \approx 0$). Light from both universes is extremely stretched and distorted, meeting at the "equator" and creating multiple, repeating ghost images.*
+*Figure 4: A side-view while traversing the wormhole's throat. Light from both universes is extremely stretched and distorted, meeting at the "equator" and creating multiple, repeating ghost images.*
 ## Features
 
 * **Real-time GPU Ray-Tracing:** Utilizes ModernGL to perform parallel ray-tracing on the GPU, enabling a high-framerate, interactive experience.
@@ -181,6 +181,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
