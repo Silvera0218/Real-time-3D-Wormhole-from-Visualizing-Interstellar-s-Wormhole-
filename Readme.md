@@ -171,6 +171,47 @@ When you use the `A/D` (strafe left/right) or `Q/E` (strafe up/down) keys, you a
 * As the camera moves off-axis, light rays from the other side must take a more "grazing" path to reach your eye.
 * This means the light rays "skim" closer to the strong gravitational field of the wormhole's throat ($l$ near $0$).
 * This closer pass results in more extreme light bending, which manifests visually as the **drastic stretching, warping, and asymmetrical gravitational lensing** that you observe.
+--
+## Challenges & Future Work
+
+### Limitation: Axis-Aligned Wormhole
+
+A major challenge and the next logical step for this project is to implement a **rotation-invariant wormhole** (i.e., one that can be placed at any orientation).
+
+Currently, while the camera has full 6-DOF freedom, the wormhole's physics are **permanently fixed to the global Z-axis**. This limitation is hard-coded into the fragment shader with the following lines:
+
+```glsl
+float l = u_camera_pos.z;  // Proper distance 'l' is hard-coded to the camera's Z-position
+float dl = ray_dir.z;      // Initial 'l' velocity is hard-coded to the ray's Z-velocity
+```
+
+**The Challenge / Solution:**
+The solution is to decouple the wormhole's physics calculations from the world's coordinate system. This would involve:
+
+1.  **Defining an Orientation:** Defining the wormhole's position and orientation (e.g., a `position` vector, a `forward` vector, and an `up` vector) in the Python code.
+2.  **Passing Matrices:** Passing a **Model Matrix** (or its inverse, the View Matrix) to the shader as a new `uniform mat4 u_wormhole_transform`.
+3.  **Transforming Coordinates:** In the shader, before the physics calculations, transforming the `u_camera_pos` and `ray_dir` from World Space into the **Wormhole's Local Space**.
+
+**Example (Conceptual):**
+```glsl
+// In the shader
+uniform mat4 u_wormhole_inverse_transform; // The wormhole's inverse transform matrix
+
+...
+
+// Transform ray and camera into the wormhole's "local space"
+vec3 local_pos = (u_wormhole_inverse_transform * vec4(u_camera_pos, 1.0)).xyz;
+vec3 local_dir = (u_wormhole_inverse_transform * vec4(ray_dir, 0.0)).xyz;
+
+// Now, the physics are calculated in local space, where the Z-axis *is* the wormhole's axis
+float l = local_pos.z;
+float r_pos = length(local_pos.xy); // (This is the correct way to get the radial distance)
+float dl = local_dir.z;
+// ... (The calculation for H would also need to be updated)
+```
+
+Solving this would allow the wormhole to be placed at any coordinate and aimed in any direction, creating a truly free and dynamic simulation.
+
 
 ## References
 
@@ -191,6 +232,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
