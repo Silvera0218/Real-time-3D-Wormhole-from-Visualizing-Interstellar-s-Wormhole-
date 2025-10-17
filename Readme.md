@@ -70,6 +70,7 @@ This project does not render a 3D model. Instead, it operates by **reverse ray-t
     (Note: The two skyboxes use different naming conventions. The `load_cubemap` function in the code is already set up to handle this.)
 
     You can find usable skybox resources (like the format for `skybox2`) here: [Keijiro's Cubemap Repository](https://github.com/keijiro/CubeMap-Unity/tree/master/Assets/CubeMap)
+
     Or you can treat your own backgrounds in [Panorama to Cubemap](https://jaxry.github.io/panorama-to-cubemap/).
 
 ## Usage
@@ -190,6 +191,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
