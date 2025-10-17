@@ -5,7 +5,7 @@ This is a real-time 3D wormhole simulation built with Python, Pygame, and Modern
 This project does not render a 3D model. Instead, it operates by **reverse ray-tracing** the path of light (the geodesic) through curved spacetime for every pixel on the screen.
 
 ![Wormhole Simulation Placeholder](gif_wh.gif)
-*(Please replace this placeholder GIF with your own recording)*
+
 
 ## Features
 
@@ -68,8 +68,6 @@ python wormhole_sim.py
 
 * **Mouse:** Look around (controls camera orientation)
 * **`W` / `S`:** Move forward / backward
-* **`A` / `D`:** Strafe left / right
-* **`E` / `Q`:** Move up / down
 * **`Spacebar`:** **Start / Stop GIF Recording**. After stopping, a timestamped `.gif` file will be saved in the script's directory.
 * **`ESC`:** Exit the simulation
 
@@ -166,5 +164,6 @@ The ray-tracing equations and physical model used in this simulation are primari
 * **arXiv Link:** [https://arxiv.org/abs/1502.03809](https://arxiv.org/abs/1502.03809)
 
 ## License
+
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
