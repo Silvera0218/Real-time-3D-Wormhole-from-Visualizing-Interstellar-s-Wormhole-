@@ -90,7 +90,7 @@ python wormhole_sim.py
 
 ---
 
-## In-Depth Theoretical Analysis
+## Theoretical Backgrounds
 
 The physical core of this simulation lies in the GLSL fragment shader (`get_fragment_shader`), which acts as a real-time **geodesic integrator**.
 
@@ -232,6 +232,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
