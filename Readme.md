@@ -163,7 +163,15 @@ The ray-tracing equations and physical model used in this simulation are primari
 * **Authors:** Oliver James, Eugénie von Tunzelmann, Paul Franklin, Kip S. Thorne
 * **arXiv Link:** [https://arxiv.org/abs/1502.03809](https://arxiv.org/abs/1502.03809)
 
+The project was also heavily inspired by the following resources:
+
+* **Inspirational Video:** "Coding Adventure: Wormhole" by ScienceClic(Alessandro Roussel).
+    * **YouTube Link:** [https://www.youtube.com/watch?v=ABFGKdKKKyg](https://www.youtube.com/watch?v=ABFGKdKKKyg)
+* **Original Shader Concept:** "Wormhole" by ScienceClic(Alessandro Roussel) on Shadertoy.
+    * **Shadertoy Link:** [https://www.shadertoy.com/view/lcdGWB](https://www.shadertoy.com/view/lcdGWB)
+
 ## License
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
