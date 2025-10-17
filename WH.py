@@ -6,10 +6,8 @@ from PIL import Image
 import os
 import datetime
 
-# --- 窗口和模拟参数 ---
 WINDOW_SIZE = (1280, 720)
 
-# --- 虫洞物理参数 ---
 WORMHOLE_RHO = 2.0
 WORMHOLE_A = 2
 WORMHOLE_M = 0.3
@@ -179,10 +177,9 @@ class Wormhole3D:
         filename = f"wormhole_recording_{timestamp}.gif"
 
         print(f"Saving {len(self.frames_buffer)} frames to {filename}... This may take a moment.")
-        
-        # 尝试获取一个合理的帧率，如果FPS为0则给一个默认值
+    
         fps = self.clock.get_fps()
-        duration = int(1000 / fps) if fps > 0 else 33 # 默认约30fps
+        duration = int(1000 / fps) if fps > 0 else 33 
         
         self.frames_buffer[0].save(
             filename,
@@ -262,9 +259,9 @@ class Wormhole3D:
             self.vao.render(moderngl.TRIANGLE_STRIP)
 
             if self.is_recording:
-                # --- ★★★ 这是被修正的一行 ★★★ ---
+
                 raw_pixels = self.ctx.screen.read(components=3, alignment=1)
-                # ------------------------------------
+
                 image = Image.frombytes('RGB', (self.width, self.height), raw_pixels)
                 image = image.transpose(Image.FLIP_TOP_BOTTOM)
                 self.frames_buffer.append(image)
@@ -279,4 +276,5 @@ class Wormhole3D:
 
 if __name__ == '__main__':
     sim = Wormhole3D(WINDOW_SIZE)
+
     sim.run()
