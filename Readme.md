@@ -1,6 +1,6 @@
 # Real-time 3D Wormhole Ray-Tracer
 
-This is a real-time 3D wormhole simulation built with Python, Pygame, and ModernGL. It accurately simulates the visual distortion seen when looking at and traveling through a traversable wormhole (Morris-Thorne metric) by performing real-time ray-tracing in a GLSL fragment shader.
+This is a real-time 3D wormhole simulation built with Python, Pygame, and ModernGL,which is the development of my previous [demo](https://github.com/Silvera0218/Wormhole-Simulation.). It accurately simulates the visual distortion seen when looking at and traveling through a traversable wormhole (Morris-Thorne metric) by performing real-time ray-tracing in a GLSL fragment shader.
 
 This project does not render a 3D model. Instead, it operates by **reverse ray-tracing** the path of light (the geodesic) through curved spacetime for every pixel on the screen.
 
@@ -232,6 +232,7 @@ The project was also heavily inspired by the following resources:
 
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 
 
